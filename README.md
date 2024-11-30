@@ -10,3 +10,5 @@ Today I added separate routes for main site and blog pages.
 I learned that we can keep routes separate for main applicaiton and the blog site which is a requirement for most modern public facing websites. 
 The blog pages blueprint is registered with the main site blueprint, the main site blueprint is registered with the app.
 By doing this we overcome the need to always update the main.py with new routes. 
+
+Learned how to put blueprints in separate folders.
