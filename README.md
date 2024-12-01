@@ -12,3 +12,6 @@ The blog pages blueprint is registered with the main site blueprint, the main si
 By doing this we overcome the need to always update the main.py with new routes. 
 
 Learned how to put blueprints in separate folders.
+
+Here's how to run the app proper:
+`flask --app main run
