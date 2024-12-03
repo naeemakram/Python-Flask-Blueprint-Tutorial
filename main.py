@@ -1,10 +1,15 @@
 from flask import Flask
-from blueprints.main_site import main_site
+from blueprints import main_site
+import os
+
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, instance_relative_config=True)
     app.register_blueprint(main_site.main_site)
-    return app
+    print(f'App name: {__name__}', f'Instance path is: {app.instance_path}')
 
-if __name__ == '__main__':
-    create_app().run(host='0.0.0.0', port=5000)
+    try:
+        os.makedirs(app.instance_path)
+    except OSError:
+        pass
+    return app
