@@ -15,3 +15,6 @@ Learned how to put blueprints in separate folders.
 
 Here's how to run the app proper:
 `flask --app main run
+
+Command showing how to run a flask application with gunicorn
+gunicorn -w 4 'main:create_app()'
